@@ -292,6 +292,22 @@ app.add_middleware(
 
 # ----------------- ROUTES -----------------
 
+@app.get("/")
+async def root():
+    """Root endpoint with API info."""
+    return {
+        "message": "Breast Cancer Detection API",
+        "version": "1.0.0",
+        "status": "running",
+        "endpoints": {
+            "health": "/health",
+            "analyze": "/analyze (POST - upload image)",
+            "report": "/report (POST - get PDF report)",
+            "docs": "/docs (API documentation)"
+        }
+    }
+
+
 @app.get("/health")
 async def health_check():
     """Simple health check + model load status."""

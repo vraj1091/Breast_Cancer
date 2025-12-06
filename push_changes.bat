@@ -2,23 +2,15 @@
 cd /d C:\Users\vrajr\Downloads\BreastCancerDetect\BreastCancerDetect
 
 echo ========================================
-echo Fixing Python version for Render
+echo Pushing updates to GitHub
 echo ========================================
 echo.
 
-echo Adding all changes...
 git add -A
-
-echo.
-echo Committing changes...
-git commit -m "Fix: Python 3.11 for Render, tensorflow-cpu for free tier"
-
-echo.
-echo Pushing to GitHub...
+git commit -m "Add root route, update backend URL"
 git push origin main
 
 echo.
-echo ========================================
-echo Done! Go back to Render and redeploy
+echo Done! Render will auto-deploy.
 echo ========================================
 pause

@@ -23,7 +23,7 @@ const getDefaultApiBase = () => {
   }
 
   // Fallback for production (Render backend)
-  return "https://breast-cancer-backend.onrender.com";
+  return "https://breast-cancer-73t1.onrender.com";
 };
 
 const buildEndpoint = (base, endpoint) => {
