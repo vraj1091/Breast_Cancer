@@ -9,7 +9,8 @@ services:
     region: oregon
     plan: free
     rootDir: backend
-    buildCommand: pip install -r requirements.txt
+    pythonVersion: "3.11.0"
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     envVars:
@@ -27,12 +28,7 @@ services:
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: build
-    headers:
-      - path: /*
-        name: X-Frame-Options
-        value: DENY
     routes:
       - type: rewrite
         source: /*
         destination: /index.html
-

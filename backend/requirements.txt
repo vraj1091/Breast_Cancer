@@ -5,25 +5,12 @@ python-multipart==0.0.9
 
 # Image Processing
 pillow==10.4.0
-numpy==1.25.2
+numpy>=1.24.0,<2.0.0
 
 # Visualization & Reports
-matplotlib==3.8.4
-scipy==1.11.4
-reportlab==4.2.2
+matplotlib>=3.8.0
+scipy>=1.11.0
+reportlab>=4.0.0
 
-# Machine Learning
-tensorflow==2.15.0
-
-# For production (optional - if using gunicorn)
-# gunicorn==21.2.0
-
-gradio==4.44.0
-tensorflow==2.15.0
-pillow==10.4.0
-numpy==1.25.2
-matplotlib==3.8.4
-scipy==1.11.4
-reportlab==4.2.2
-fastapi==0.115.0
-python-multipart==0.0.9
+# Machine Learning (use tensorflow-cpu for smaller size on free tier)
+tensorflow-cpu==2.15.0
