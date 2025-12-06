@@ -8,11 +8,13 @@ import { useAuth } from "./context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const getDefaultApiBase = () => {
+  // Check for environment variable first (for production deployment)
   const envUrl = process.env.REACT_APP_API_BASE_URL;
   if (envUrl && envUrl.trim().length > 0) {
     return envUrl.replace(/\/$/, "");
   }
 
+  // For local development
   if (typeof window !== "undefined") {
     const localHosts = ["localhost", "127.0.0.1", "0.0.0.0"];
     if (localHosts.includes(window.location.hostname)) {
@@ -20,7 +22,8 @@ const getDefaultApiBase = () => {
     }
   }
 
-  return "/api";
+  // Fallback for production (Railway backend)
+  return "https://breastcancer-backend.up.railway.app";
 };
 
 const buildEndpoint = (base, endpoint) => {
