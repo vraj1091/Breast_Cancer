@@ -2,7 +2,7 @@
 cd /d C:\Users\vrajr\Downloads\BreastCancerDetect\BreastCancerDetect
 
 echo ========================================
-echo Pushing Deployment Changes to GitHub
+echo Pushing Render Deployment Config to GitHub
 echo ========================================
 echo.
 
@@ -11,7 +11,7 @@ git add -A
 
 echo.
 echo Committing changes...
-git commit -m "Deploy: Railway backend + Vercel frontend config"
+git commit -m "Deploy: Render.com config for frontend and backend"
 
 echo.
 echo Pushing to GitHub...
@@ -19,11 +19,13 @@ git push origin main
 
 echo.
 echo ========================================
-echo Done! Check https://github.com/vraj1091/Breast_Cancer
+echo Done! Now deploy on Render.com
 echo ========================================
 echo.
 echo Next Steps:
-echo 1. Go to railway.app and deploy backend
-echo 2. Go to vercel.com and deploy frontend
+echo 1. Go to https://render.com
+echo 2. Sign in with GitHub
+echo 3. New + Web Service (for backend)
+echo 4. New + Static Site (for frontend)
 echo ========================================
 pause

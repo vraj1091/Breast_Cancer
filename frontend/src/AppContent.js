@@ -22,8 +22,8 @@ const getDefaultApiBase = () => {
     }
   }
 
-  // Fallback for production (Railway backend)
-  return "https://breastcancer-backend.up.railway.app";
+  // Fallback for production (Render backend)
+  return "https://breast-cancer-backend.onrender.com";
 };
 
 const buildEndpoint = (base, endpoint) => {
